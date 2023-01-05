@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+
+    <!-- Osmos File Upload Button -->
+    <!-- See this link for more docs. https://docs.osmos.io/osmos-uploader/webpage-integration -->
+    <script src="https://cdn.dev-main.osmos.io/button/embed/v1/OsmosButton.js"></script>
+    <script>
+      Osmos.configure({
+        schema: {
+          fields: [
+            {
+              name: "Hire date",
+              displayName: "Hire date",
+              description: "<Your field description here>",
+            },
+            {
+              name: "Termination date",
+              displayName: "Termination date",
+              description: "<Your field description here>",
+            },
+            {
+              name: "Plan Start date",
+              displayName: "Plan Start date",
+              description: "<Your field description here>",
+            },
+            {
+              name: "Plan Stop date",
+              displayName: "Plan Stop date",
+              description: "<Your field description here>",
+            },
+          ],
+        },
+        // Getting the uploader token from the .env file
+        token: "%REACT_APP_UPLOADER_TOKEN%",
+        uploadDescription:
+          "<Include a description of your uploader upload here which will be shown to users that click the uploader>",
+
+        // Set to false to show the schema for the destination connector in the uploader on the file upload screen.
+        hideUploadSchema: true,
+
+        // Set to false to show the uploader description on the file upload screen.
+        hideUploadDescription: true,
+
+        // Set to false to show the advanced version of the uploader, with formulas, SmartFill, and QuickFixes.
+        disableAdvancedMode: true,
+
+        // Maximum number of records from the uploaded file to display in the User Interface.
+        // This value is capped at 100,000 and higher values will default back to 100,000.
+        // Can be lowered to increase performance when using expensive validators.
+        maxRecords: 100000,
+      });
+    </script>
+    <!-- End Osmos File Upload Button -->
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>
