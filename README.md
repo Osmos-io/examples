@@ -5,6 +5,7 @@ This repo contains examples of common customer use cases
 ### Included Examples
 
 -   [schema-designer](/examples/schema-designer)
+-   [React uploader](/examples/osmos-uploader-with-reactjs-and-typescript)
 
 ### Adding New Examples and Contributing
 
