@@ -1,0 +1,40 @@
+openapi: 3.0.0
+info:
+  contact: {}
+  description: 'https://docs.osmos.io/data-validations/server-side-validation-webhooks'
+  termsOfService: 'https://www.osmos.io/tos'
+  title: Osmos Sample Parameter Parser Endpoint
+  version: '1.0'
+servers:
+  - description: Localhost
+    url: 'http://localhost:3000'
+paths:
+  /submit:
+    post:
+      summary: ''
+      operationId: post-submit
+      responses:
+        '200':
+          description: OK
+        '500':
+          description: Internal Server Error
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: string
+                foo:
+                  type: string
+                bar:
+                  type: string
+                queryparam1:
+                  type: string
+                queryparam2:
+                  type: string
+components:
+  requestBodies: {}
+  responses: {}
+  schemas: {}
