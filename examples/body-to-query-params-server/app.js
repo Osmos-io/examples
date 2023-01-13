@@ -24,14 +24,14 @@ app.post('/', (req, res) => {
     console.log('POST body: ', req.body);
 
     params.forEach((param) => {
-        outboundUrl.searchParams.append(param.trim(), req.body.param);
+        outboundUrl.searchParams.append(param.trim(), req.body[param]);
         delete req.body[param];
     });
     const outboundUrlThisRequest = outboundUrl.href;
     console.log('Sending payload: ' + JSON.stringify(req.body));
-    console.log('Payload URL: ' + outboundUrlThisRequest.href);
+    console.log('Payload URL: ' + outboundUrlThisRequest);
 
-    axios.post(outboundUrlThisRequest, req.body)
+    axios.post(outboundUrl, req.body)
         .then(_response => {
             res.end()
         })
