@@ -1,13 +1,7 @@
-This very simple server is set up to turn JSON properties in the inboud request into query parameters for the outbound request.
+This very simple server is set up to turn JSON properties in the inbound request into query parameters for the outbound request.
 
-Incoming requests shouls set the following headers (example data shown):
+Incoming requests should set the following headers (example data shown):
 
-```
-Outbound-Url: https://httpbin.org/post
-Query-Param-Fields: queryparam1,queryparam2
-```
-
-When this server receives a request with a POSt body like the example one below:
 
 ```
 {
