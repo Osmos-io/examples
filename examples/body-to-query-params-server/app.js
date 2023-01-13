@@ -20,11 +20,11 @@ app.post('/', (req, res) => {
 
     console.log('POST body: ', req.body);
 
-    let outboundUrlThisRequest = outboundUrl;
-    params.forEach(param => {
-        outboundUrlThisRequest = outboundUrlThisRequest + param + '=' + req.body[param] + '&';
+    const finalOutboundUrl = params.reduce((acc, param) => {
+        const newUrl = `${acc}${param}=${req.body.param}&`
         delete req.body[param];
-    });
+        return newUrl
+    }, outboundUrl);
     console.log('Sending payload: ' + JSON.stringify(req.body));
     console.log('Payload URL: ' + outboundUrlThisRequest);
 
