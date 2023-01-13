@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "A simple server that receives a JSON payload, and makes an outbound API request with some of the JSON object properties set as query parameters",
   "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "Osmos",
   "license": "MIT",
   "dependencies": {

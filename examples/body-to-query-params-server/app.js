@@ -9,24 +9,27 @@ app.use(bodyParser.json())
 const port = 3000
 
 app.post('/', (req, res) => {
-    const headerOutboundUrl = req.get('Outbound-Url');
-    console.log('Outbount Url: ' + process.env.OUTBOUND_URL);
-    const outboundUrl = `${headerOutboundUrl}?`;
+    const headerOutboundUrl = req.get('x-Osmos-Outbound-Url');
+    if (headerOutboundUrl === undefined || headerOutboundUrl === '') {
+        res.status(500).send('Outbound URL not set')
+    }
+    console.log('Outbount Url: ' + headerOutboundUrl);
+    let outboundUrl = new URL(headerOutboundUrl);
 
-    const outboundQueryParams = req.get('Query-Param-Fields');
+    const outboundQueryParams = req.get('x-Osmos-Query-Param-Fields');
     console.log('Query Parameter Fields: ' + outboundQueryParams);
 
     const params = outboundQueryParams.split(',');
 
     console.log('POST body: ', req.body);
 
-    const finalOutboundUrl = params.reduce((acc, param) => {
-        const newUrl = `${acc}${param}=${req.body.param}&`
+    params.forEach((param) => {
+        outboundUrl.searchParams.append(param.trim(), req.body.param);
         delete req.body[param];
-        return newUrl
-    }, outboundUrl);
+    });
+    const outboundUrlThisRequest = outboundUrl.href;
     console.log('Sending payload: ' + JSON.stringify(req.body));
-    console.log('Payload URL: ' + outboundUrlThisRequest);
+    console.log('Payload URL: ' + outboundUrlThisRequest.href);
 
     axios.post(outboundUrlThisRequest, req.body)
         .then(_response => {
