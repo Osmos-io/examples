@@ -11,7 +11,7 @@ const port = 3000
 app.post('/', (req, res) => {
     const headerOutboundUrl = req.get('Outbound-Url');
     console.log('Outbount Url: ' + process.env.OUTBOUND_URL);
-    const outboundUrl = headerOutboundUrl + "?";
+    const outboundUrl = `${headerOutboundUrl}?`;
 
     const outboundQueryParams = req.get('Query-Param-Fields');
     console.log('Query Parameter Fields: ' + outboundQueryParams);
