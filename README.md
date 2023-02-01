@@ -4,8 +4,9 @@ This repo contains examples of common customer use cases
 
 ### Included Examples
 
--   [schema-designer](/examples/schema-designer)
--   [React uploader](/examples/osmos-uploader-with-reactjs-and-typescript)
+- [schema-designer](/examples/schema-designer)
+- [React uploader](/examples/osmos-uploader-with-reactjs-and-typescript)
+- [Parser webhook](/examples/parser-webhook)
 
 ### Adding New Examples and Contributing
 
