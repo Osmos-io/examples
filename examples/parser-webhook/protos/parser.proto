@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package parser.v1;
+package osmos.parser.v1;
 
 // Parser is a service implemented by customers for Osmos to call. Customers can
 // set up parser endpoints for source connectors or uploaders

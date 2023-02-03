@@ -14,7 +14,7 @@ const PACKAGE_DEFINITION = protoLoader.loadSync(PROTO_PATH, {
 });
 
 const PARSER_WEBHOOKS_PROTO =
-  grpc.loadPackageDefinition(PACKAGE_DEFINITION).parser.v1;
+  grpc.loadPackageDefinition(PACKAGE_DEFINITION).osmos.parser.v1;
 
 /**
  * parseFileToTable This request attempts to parse a sequence of bytes as a CSV.
