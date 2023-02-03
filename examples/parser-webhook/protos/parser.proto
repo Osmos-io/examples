@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package parser.v1;
+
+// Parser is a service implemented by customers for Osmos to call. Customers can
+// set up parser endpoints for source connectors or uploaders
+service Parser {
+  rpc ParseFileToTable(ParseFileToTableRequest)
+      returns (ParseFileToTableResponse);
+}
+
+// A row used in a table
+message TableRow {
+  repeated string values = 1;
+}
+
+// request to parse a file and return its contents
+message ParseFileToTableRequest {
+  string file_name = 1;
+  bytes data = 2;
+}
+
+// response for the parse file request which contains the header row and the
+// rest of the corresponding table rows
+message ParseFileToTableResponse {
+  repeated string headers = 1;
+  repeated TableRow rows = 2;
+}
