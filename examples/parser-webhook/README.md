@@ -84,7 +84,7 @@ We should see an output that looks something like this
 
 Once your service is up and deployed, please ask Osmos support to enable the ability for your org to use parser webhooks. (support@osmos.io)[mailto:support@osmos.io].
 
-`!!! ⚠️ If this feature is not enabled, you will not see anything in the UI for adding your parser webhook URL ⚠️ !!!`
+> :warning: \*If this feature is not enabled, you will not see anything in the UI for adding your parser webhook URL :warning:
 
 Let's go ahead and create a new connector by clicking on the `Connectors` button on the left side of your screen followed by the `New Connector` button.
 
