@@ -5,7 +5,7 @@ This code can be modified to add support for arbitrary file types to Osmos (eg: 
 
 ## Getting Started
 
-To follow along in this tutorial, we use (grpcurl)[https://github.com/fullstorydev/grpcurl] to make gRPC requests from the command line.
+To follow along in this tutorial, we use [grpcurl](https://github.com/fullstorydev/grpcurl) to make gRPC requests from the command line.
 To install on macos run
 
 ```bash
@@ -20,7 +20,7 @@ To install from the source code please run
 go install github.com/fullstorydev/grpcurl/cmd/grpcurl@latest
 ```
 
-If these methods fail please check the (grpcurl install instructions)[https://github.com/fullstorydev/grpcurl#installation]
+If these methods fail please check the [grpcurl install instructions](https://github.com/fullstorydev/grpcurl#installation)
 
 Before getting started, please ensure you have NodeJS installed onto your local machine.
 
@@ -59,7 +59,7 @@ grpcurl -import-path ./protos -proto parser.proto -plaintext -d "{\"file_name\":
 
 ```
 
-Please note that the `data` attribute must be base64 encoded when using the JSON format for gRPC (see (here)[https://developers.google.com/protocol-buffers/docs/proto3#json] for more information)
+Please note that the `data` attribute must be base64 encoded when using the JSON format for gRPC (see [here](https://developers.google.com/protocol-buffers/docs/proto3#json) for more information)
 
 We should see an output that looks something like this
 
@@ -82,7 +82,7 @@ We should see an output that looks something like this
 
 ## Integrating with Osmos
 
-Once your service is up and deployed, please ask Osmos support to enable the ability for your org to use parser webhooks. (support@osmos.io)[mailto:support@osmos.io].
+Once your service is up and deployed, please ask Osmos support to enable the ability for your org to use parser webhooks. [support@osmos.io](mailto:support@osmos.io).
 
 > :warning: \*If this feature is not enabled, you will not see anything in the UI for adding your parser webhook URL :warning:
 
@@ -103,4 +103,4 @@ Finally, click `Test & Save`. Once everything checks out you are all set to go!
 ## Next Steps
 
 From here, you should be able to add/remove/change any of the proto files and update the endpoints to your needs.
-If you need any help please contact (support@osmos.io)[mailto:support@osmos.io].
+If you need any help please contact [support@osmos.io](mailto:support@osmos.io).
