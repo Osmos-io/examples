@@ -30,12 +30,6 @@ Next, let's install our dependencies by running
 npm install
 ```
 
-Next, let's start the server by running
-
-```bash
-npm start
-```
-
 ## gRPC protos
 
 The requests Osmos will make to your service are defined in `protos/parser.proto`. Please take a look at this file to understand the shape of the request
@@ -56,7 +50,6 @@ Next, let's go ahead and make a request to the server. Our request is going to r
 
 ```bash
 grpcurl -import-path ./protos -proto parser.proto -plaintext -d "{\"file_name\": \"serious_business.csv\", \"data\": \"$(cat serious_business.csv | base64)\" }" localhost:50051 parser.v1.Parser/ParseFileToTable
-
 ```
 
 Please note that the `data` attribute must be base64 encoded when using the JSON format for gRPC (see [here](https://developers.google.com/protocol-buffers/docs/proto3#json) for more information)
@@ -84,7 +77,7 @@ We should see an output that looks something like this
 
 Once your service is up and deployed, please ask Osmos support to enable the ability for your org to use parser webhooks. [support@osmos.io](mailto:support@osmos.io).
 
-> :warning: \*If this feature is not enabled, you will not see anything in the UI for adding your parser webhook URL :warning:
+> :warning: If this feature is not enabled, you will not see anything in the UI for adding your parser webhook URL :warning:
 
 Let's go ahead and create a new connector by clicking on the `Connectors` button on the left side of your screen followed by the `New Connector` button.
 
