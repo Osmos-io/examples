@@ -6,7 +6,8 @@ This repo contains examples of common customer use cases
 
 - [schema-designer](/examples/schema-designer)
 - [React uploader](/examples/osmos-uploader-with-reactjs-and-typescript)
-- [Parser webhook](/examples/parser-webhook)
+- [Parser webhook (CSV)](/examples/parser-webhook-csv)
+- [Parser webhook (fixed width file)](/examples/parser-webhook-fixed-width)
 
 ### Adding New Examples and Contributing
 

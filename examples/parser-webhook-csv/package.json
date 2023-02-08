@@ -1,7 +1,7 @@
 {
-    "name": "parser-webhook",
+    "name": "parser-webhook-csv",
     "version": "1.0.0",
-    "description": "This example implements a webhook servier that receives the bytes of a file and parses it to return the data inside the file in tabular form. This code can be modified to add support for arbitrary file types to Osmos (eg: XML, EDI etc.)",
+    "description": "This example implements a webhook servier that receives the bytes of a CSV file and parses it to return the data inside the file in tabular form. This code can be modified to add support for arbitrary file types to Osmos (eg: XML, EDI etc.)",
     "main": "src/app.mjs",
     "scripts": {
         "start": "GRPC_VERBOSITY=info node src/app.mjs"

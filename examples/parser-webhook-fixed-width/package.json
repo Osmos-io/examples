@@ -1,0 +1,17 @@
+{
+    "name": "parser-webhook-fixed-width",
+    "version": "1.0.0",
+    "description": "This example implements a webhook servier that receives the bytes of a CSV file and parses it to return the data inside the file in tabular form. This code can be modified to add support for arbitrary file types to Osmos (eg: XML, EDI etc.)",
+    "main": "src/app.mjs",
+    "scripts": {
+        "start": "GRPC_VERBOSITY=info node src/app.mjs"
+    },
+    "author": "Osmos Engineering",
+    "license": "ISC",
+    "dependencies": {
+        "@grpc/grpc-js": "^1.1.0",
+        "@grpc/proto-loader": "^0.5.0",
+        "fixed-width-parser": "^3.0.0",
+        "google-protobuf": "^3.0.0"
+    }
+}
