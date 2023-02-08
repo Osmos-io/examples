@@ -49,7 +49,7 @@ This will start the server which is listening on port `50051`
 Next, let's go ahead and make a request to the server. Our request is going to read in the contents of `serious_business.txt` as bytes and forward those as a grpc request to the server. To do so run
 
 ```bash
-grpcurl -import-path ./protos -proto parser.proto -plaintext -d "{\"file_name\": \"serious_business.txt\", \"data\": \"$(cat serious_business.txt | base64)\" }" localhost:50051 parser.v1.Parser/ParseFileToTable
+grpcurl -import-path ./protos -proto parser.proto -plaintext -d "{\"file_name\": \"serious_business.txt\", \"data\": \"$(cat serious_business.txt | base64)\" }" localhost:50051 osmos.parser.v1.Parser/ParseFileToTable
 ```
 
 Please note that the `data` attribute must be base64 encoded when using the JSON format for gRPC (see [here](https://developers.google.com/protocol-buffers/docs/proto3#json) for more information)
