@@ -7,7 +7,7 @@ This repo contains examples of common customer use cases
 - [React uploader](/examples/osmos-uploader-with-reactjs-and-typescript)
 - [Parser webhook (CSV)](/examples/parser-webhook-csv)
 - [Parser webhook (fixed width file)](/examples/parser-webhook-fixed-width)
-- [Validation webhook](/examples/validation-webhoook)
+- [Validation webhook](/examples/validation-webhook)
 
 ### Adding New Examples and Contributing
 
