@@ -1,4 +1,4 @@
-## Setup of embed uploader integration within the React app 
+## Setup of embedded uploader integration within React app 
 
 1. Copy the uploader embed code and add the script to the index.html file inside the public folder.
 2. Copy the uploader button and insert it into the component you want to embed.
