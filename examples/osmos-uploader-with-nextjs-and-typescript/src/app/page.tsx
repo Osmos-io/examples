@@ -28,7 +28,7 @@ export default function Home() {
         className="ftl-button"
         onClick={() =>
           // while the token is technically optional, the uploader will not work if it is not provided
-          window.Osmos.handleClick(process.env.NEXT_PUBLIC_UPLOADER_TOKEN)
+          window.Osmos.handleClick(configurationOptions.token)
         }
       >
         Upload Your Data
