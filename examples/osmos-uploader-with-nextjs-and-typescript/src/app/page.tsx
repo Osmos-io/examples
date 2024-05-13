@@ -3,7 +3,7 @@ import Script from "next/script";
 import styles from "./page.module.css";
 
 export default function Home() {
-  const configureOptions = {
+  const configurationOptions = {
     schema: {
       fields: [
         {
@@ -13,17 +13,22 @@ export default function Home() {
         },
       ],
     },
+    token: process.env.NEXT_PUBLIC_UPLOADER_TOKEN,
   };
 
   return (
     <main className={styles.main}>
-      <Script src="https://cdn.osmos.io/button/embed/v1/OsmosButton.js"></Script>
-      <Script id="osmos-configure">{`Osmos.configure(${configureOptions});`}</Script>
+      <Script
+        src="https://cdn.osmos.io/button/embed/v1/OsmosButton.js"
+        onLoad={() => {
+          Osmos.configure(configurationOptions);
+        }}
+      ></Script>
       <button
         className="ftl-button"
         onClick={() =>
           // while the token is technically optional, the uploader will not work if it is not provided
-          window.Osmos.handleClick(process.env.NEXT_PUBLIC_UPLOADER_TOKEN)
+          window.Osmos.handleClick(configurationOptions.token)
         }
       >
         Upload Your Data
