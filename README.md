@@ -9,6 +9,7 @@ This repo contains examples of common customer use cases
 - [Parser webhook (CSV)](/examples/parser-webhook-csv)
 - [Parser webhook (fixed width file)](/examples/parser-webhook-fixed-width)
 - [Validation webhook](/examples/validation-webhook)
+- [Reading query params in Osmos HTTP destination Connector](/examples/body-to-query-params-server)
 
 ### Adding New Examples and Contributing
 
